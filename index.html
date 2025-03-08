@@ -1,41 +1,31 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="styles.css">
-    
-    <link rel="icon" href="https://1drv.ms/i/s!AvASYBEBVN4YhDT9r9mEDiwjbxgT?embed=1&width=256">
-    
-    <link rel="preload" as="image" href="https://1drv.ms/i/s!AvASYBEBVN4YhDjJD3VCVolFvvKL?embed=1&width=4608&height=2963">
-    <link rel="preload" as="image" href="https://1drv.ms/i/s!AvASYBEBVN4YhDeYsTGhHgbzpYHK?embed=1&width=1792&height=1024">
-    
-    <title>MONTESEUPC</title>
+    <title>Página Inicial</title>
 </head>
-<body id="Body">
-    <nav id="TopBar">
-        <div class="menu-toggle-btn" id="menu-toggle-btn" onclick="NavOpen(this)">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-       
-        <a onclick="Home()" id="Title">MONTESEUPC</a>
-        
-        <img src="https://1drv.ms/i/s!AvASYBEBVN4YhDT9r9mEDiwjbxgT?embed=1&width=256" id="Logo">
-    </nav>
+<body>
+    <div id="Background">
+        <img src="https://1drv.ms/i/c/18de5401116012f0/IQRfmWp0PuyiRaeG8lCoOmRXAVwBjd5Zjf_X95KfhCEOmDE?width=1024">
+    </div>
 
-    <div class="SideBar" id="SideBar">
-        <button onmouseenter="OnMouseEnter(this)" onmouseleave="OnMouseLeave(this)" onclick="Home()"><span class="Active">INÍCIO</span></button>
-        <button onmouseenter="OnMouseEnter(this)" onmouseleave="OnMouseLeave(this)" onclick="NovaBuild()"><span>NOVA BUILD</span></button>   
-        <button onmouseenter="OnMouseEnter(this)" onmouseleave="OnMouseLeave(this)" onclick=""><span>BUILDS SALVAS</span></button>
-        <button onmouseenter="OnMouseEnter(this)" onmouseleave="OnMouseLeave(this)" onclick=""><span>CONFIGURA&Ccedil&OtildeES</span></button>      
+    <div id="TopNavBar">
+        <img id="Arrow" src="https://1drv.ms/i/c/18de5401116012f0/UQTwEmARAVTeIIAYNgIAAAAAAI2hhdhmK6jETkM?width=256" onclick="OpenLeftBar()">
+        <img id="TopLogo" src="https://1drv.ms/i/c/18de5401116012f0/UQTwEmARAVTeIIAYNAIAAAAAAP2v2YQOLCNvGBM?width=256">
+        <p id="MainText">MONTAR PC</p>
+    </div>
+
+    <div id="LeftNavBar">
+        <button onclick="window.location.href='index.html'">
+            <p>INÍCIO</p>
+        </button>
+
+        <button>
+            <p>MONTAR</p>
+        </button>
     </div>
 
     <script src="main.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</body>
+</body> 
 </html>
