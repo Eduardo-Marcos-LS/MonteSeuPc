@@ -1,3 +1,4 @@
+let Arrow = document.getElementById('Arrow');
 let LeftBar = document.getElementById('LeftNavBar');
 
 let LeftNavOpen = false;
@@ -5,6 +6,7 @@ let LeftNavOpen = false;
 function OpenLeftBar() {
     LeftNavOpen = !LeftNavOpen;
 
+    Arrow.style.transform = (LeftNavOpen && '180dg')
     LeftBar.style.width = (LeftNavOpen && '200px') || (!LeftNavOpen && 0);
 
     Array.from(LeftBar.children).forEach((button) => {
@@ -33,6 +35,10 @@ function preloadAssets(assets) {
       document.head.appendChild(link);
     });
   }
+
+function OnLoad() {
+    
+}
 
   preloadAssets([
     { url: 'https://1drv.ms/i/c/18de5401116012f0/IQRfmWp0PuyiRaeG8lCoOmRXAVwBjd5Zjf_X95KfhCEOmDE?width=1024', as: 'image' },
