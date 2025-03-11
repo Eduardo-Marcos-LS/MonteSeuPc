@@ -1,110 +1,142 @@
-@font-face {
-    font-family: Gotham;
-    src: url(Gotham\ Black.otf);
+@font-face { 
+    font-family: Gotham; 
+    src: url(Gotham\ Black.otf); 
+} 
+
+:root {
+    --LNBWidth: 0;
+    --LNBHeight: 100vh;
+    --LNBMarginTop: 50px;
+
+    --LNBBtnWidth: 200px;
+    --LNBBtnHeight: 50px;
+    --LNBBtnBackgroundColor: transparent;
+    --LNBBtnColor: white;
+    --LNBBtnBorder: 1.5px solid;
+    --LNBBtnJustifyContent: center;
+    --LNBBtnAlignContent: center;
+
+    --LNBBtnPPosition: relative;
+    --LNBBtnPMarginLeft: -10px;
+    --LNBBtnPWidth: 200px;
+    --LNBBtnPHeight: 20px;
+
+    --TNBWidth: 100vw;
+    --TNBHeight: 50px;
+
+    --TNBArrowHeight: 25px;
+    --TNBArrowWidth: 25px;
+    --TNBArrowMarginLeft: 10px;
+    --TNBArrowTransform: translateY(50%);
+
+    --TNBLogoHeight: 25px;
+    --TNBLogoWidth: 25px;
+    --TNBLogoMarginLeft: 5px;
+    --TNBLogoTransform: translateY(50%);
+
+    --TNBMainTextMarginLeft: 5px;
 }
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    
+@media only screen and (max-width: 600px) {  
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    #TopNavBar {
-        height: 50px;   
+@media only screen and (min-width: 768px) { 
+    #TopNavBar { 
+        width: var(--TNBWidth); 
+        height: var(--TNBHeight);
     }
 
-    #TopNavBar #Arrow {
-        height: 25px;
-        width: 25px;
-        margin-left: 10px;
-        transform: translateY(50%);
+    #TopNavBar #Arrow { 
+        height: var(--TNBArrowHeight); 
+        width: var(--TNBArrowWidth); 
+        margin-left: var(--TNBArrowMarginLeft); 
+        transform: var(--TNBArrowTransform);
     }
 
-    #TopNavBar #TopLogo {
-        height: 25px;
-        width: 25px;
-        margin-left: 5px;
-        transform: translateY(50%);
+    #TopNavBar #TopLogo { 
+        height: var(--TNBLogoHeight); 
+        width: var(--TNBLogoWidth); 
+        margin-left: var(--TNBLogoMarginLeft); 
+        transform: var(--TNBLogoTransform);
     }
 
-    #TopNavBar #MainText {
-        margin-left: 5px;
+    #TopNavBar #MainText { 
+        margin-left: var(--TNBMainTextMarginLeft); 
     }
 
-    #LeftNavBar {
-        width: 0;
-        height: 100vh;
-        margin-top: 50px;
+    #LeftNavBar { 
+        width: var(--LNBWidth); 
+        height: var(--LNBHeight); 
+        margin-top: var(--LNBMarginTop); 
     }
 
-    #LeftNavBar button {
-        width: 200px;
-        height: 50px;
-        background-color: transparent;
-        color: white;
-        border: 1.5px solid;
-        justify-content: center;
-        align-content: center;
+    #LeftNavBar button { 
+        width: var(--LNBBtnWidth); 
+        height: var(--LNBBtnHeight); 
+        background-color: var(--LNBBtnBackgroundColor); 
+        color: var(--LNBBtnColor); 
+        border: var(--LNBBtnBorder); 
+        justify-content: var(--LNBBtnJustifyContent); 
+        align-content: var(--LNBBtnAlignContent); 
     }
 
-    #LeftNavBar button p {
-        position: relative;
-        margin-left: -10px;
-        width: 200px;
-        height: 20px;
+    #LeftNavBar button p { 
+        position: var(--LNBBtnPPosition); 
+        margin-left: var(--LNBBtnPMarginLeft); 
+        width: var(--LNBBtnPWidth); 
+        height: var(--LNBBtnPHeight); 
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    
+@media only screen and (min-width: 992px) {  
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    
+@media only screen and (min-width: 1200px) {  
 }
 
-#Background {
-    z-index: 0;
+#Background { 
+    z-index: 0; 
 }
 
-#Background img {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    z-index: 0;
+#Background img { 
+    position: fixed; 
+    left: 0; 
+    top: 0; 
+    height: 100vh; 
+    width: 100vw; 
+    z-index: 0; 
 }
 
-#TopNavBar {
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    background-color: black;
-    justify-content: left;
-    display:inline-flex;
-    z-index: 1;
+#TopNavBar { 
+    position: fixed; 
+    width: var(--TNBWidth); 
+    top: 0; 
+    left: 0; 
+    background-color: black; 
+    justify-content: left; 
+    display: inline-flex; 
+    z-index: 1; 
 }
 
-#TopNavBar #MainText {
-    font-family: Gotham;
-    color: white;
+#TopNavBar #MainText { 
+    font-family: Gotham; 
+    color: white; 
 }
 
-#LeftNavBar {
-    position: fixed;  
-    background-color: black;
-    top: 0;         
-    left: 0;
-    z-index: 1;
-    display: block;
-    overflow: hidden;
-    transition: width 0.1s ease-in-out;
+#LeftNavBar { 
+    position: fixed; 
+    background-color: black; 
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
+    display: block; 
+    overflow: hidden; 
+    transition: width 0.1s ease-in-out; 
 }
