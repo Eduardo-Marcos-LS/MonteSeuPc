@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página Inicial</title>
+</head>
+<body onload="OnLoad()">
+    <div id="Background">
+        <img src="https://1drv.ms/i/c/18de5401116012f0/IQRfmWp0PuyiRaeG8lCoOmRXAVwBjd5Zjf_X95KfhCEOmDE?width=1024">
+    </div>
+
+    <div id="TopNavBar">
+        <img id="Arrow" src="https://1drv.ms/i/c/18de5401116012f0/UQTwEmARAVTeIIAYNgIAAAAAAI2hhdhmK6jETkM?width=256" onclick="OpenLeftBar()">
+        <img id="TopLogo" src="https://1drv.ms/i/c/18de5401116012f0/UQTwEmARAVTeIIAYNAIAAAAAAP2v2YQOLCNvGBM?width=256">
+        <p id="MainText">MONTAR PC</p>
+    </div>
+
+    <div id="LeftNavBar">
+        <button onclick="window.location.href='index.html'; OpenLeftBar()">
+            <p>INÍCIO</p>
+        </button>
+
+        <button onclick="window.location.href='montar.html'">
+            <p>MONTAR</p>
+        </button>
+    </div>
+
+    <script src="main.js"></script>
+</body> 
+</html>
