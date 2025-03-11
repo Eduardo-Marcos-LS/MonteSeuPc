@@ -1,11 +1,10 @@
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Página Inicial</title>
 </head>
-<body>
+<body onload="OnLoad()">
     <div id="Background">
         <img src="https://1drv.ms/i/c/18de5401116012f0/IQRfmWp0PuyiRaeG8lCoOmRXAVwBjd5Zjf_X95KfhCEOmDE?width=1024">
     </div>
@@ -17,11 +16,11 @@
     </div>
 
     <div id="LeftNavBar">
-        <button onclick="window.location.href='index.html'">
+        <button onclick="window.location.href='index.html'; OpenLeftBar()">
             <p>INÍCIO</p>
         </button>
 
-        <button>
+        <button onclick="window.location.href='montar.html'">
             <p>MONTAR</p>
         </button>
     </div>
